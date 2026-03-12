@@ -2,6 +2,8 @@
 
 This project demonstrates the implementation of a centralized monitoring system for a multi-site network infrastructure using **Syslog** and **SNMP** protocols. It focuses on network visibility, event logging, and security best practices on Cisco IOS devices.
 
+![Topology](screenshots/topology.png)
+
 ## 🚀 Key Features
 * **Centralized Logging (Syslog):** All critical network events (port status, config changes, security alerts) are forwarded to a central server.
 * **Network Health Monitoring (SNMP v2c):** Device inventory and system descriptions are queryable via MIB Browser.
