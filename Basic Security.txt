@@ -1,0 +1,28 @@
+R0#conf t
+R0(config)#enable secret Algan_2026!
+R0(config)#exit
+
+
+
+####SSH SECURITY####
+
+R0(config)#ip domain-name project.local
+R0(config)#crypto key generate rsa 
+The name for the keys will be: R0.project.local
+Choose the size of the key modulus in the range of 360 to 4096 for your
+  General Purpose Keys. Choosing a key modulus greater than 512 may take
+  a few minutes.
+
+How many bits in the modulus [512]: 1024
+
+####USER IDENTIFICATION####
+
+R0(config)#username admin privilege 15 secret admin_pass
+R0(config)#login on-success log
+R0(config)#login on-failure log
+
+R0(config)#line vty 0 4
+R0(config-line)#login local
+R0(config-line)#transport input ssh
+R0(config-line)#do wr
+

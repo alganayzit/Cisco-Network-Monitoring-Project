@@ -1,0 +1,15 @@
+R0>en
+R0#conf t
+R0(config)#ntp server 192.168.10.100
+R0(config)#do wr
+R0#show ntp status 
+Clock is synchronized, stratum 16, reference is 192.168.10.100
+nominal freq is 250.0000 Hz, actual freq is 249.9990 Hz, precision is 2**24
+reference time is 2B477EAF.000002AE (6:31:11.686 UTC Thu Mar 20 2059)
+clock offset is 0.00 msec, root delay is 0.00  msec
+root dispersion is 10.33 msec, peer dispersion is 0.12 msec.
+loopfilter state is 'CTRL' (Normal Controlled Loop), drift is - 0.000001193 s/s system poll interval is 4, last update was 15 sec ago.
+
+R0#conf t
+R0(config)#service timestamps log datetime msec 
+R0(config)#ex

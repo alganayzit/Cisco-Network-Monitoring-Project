@@ -1,0 +1,23 @@
+###Core Router####
+R0#conf t
+R0(config)#logging on 
+R0(config)#logging 192.168.10.100
+R0(config)#logging trap debugging
+
+########TEST#######
+
+R0(config)#interface gigabitEthernet 0/0
+
+R0(config-if)#shutdown 
+
+R0(config-if)#no shutdown
+
+
+###Branch Router####
+
+R1#conf t
+R1(config)#logging on
+R1(config)#logging 192.168.10.100
+R1(config)#logging trap debugging 
+R1(config)#service timestamps log datetime msec 
+R1(config)#do wr

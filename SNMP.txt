@@ -1,0 +1,6 @@
+R0>en
+Password: 
+R0#conf t
+R0(config)#snmp-server community Algan2026 ro
+%SNMP-5-WARMSTART: SNMP agent on host R0 is undergoing a warm start
+R0(config)#do wr
